@@ -1,0 +1,51 @@
+%transition {
+	transition: .5s ease;
+}
+
+%flex-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+%scroll {
+	&::-webkit-scrollbar {
+		width: 5px;
+		background: #252c38;
+	}
+	&::-webkit-scrollbar-thumb {
+		background: $orange;
+	}
+}
+
+%flex-center-in-row {
+	@extend %flex-center;
+	flex-direction: row;
+}
+
+%flex-center-in-col {
+	@extend %flex-center;
+	flex-direction: column;
+}
+
+%before-template {
+	content:'';
+	display:block;
+	position: absolute;
+}
+
+
+@mixin secBG ($url) {
+	background: url($url) no-repeat center center;
+}
+
+.flex-center {
+	@extend %flex-center;
+}
+.flex-row-end {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	align-items: center;
+}

@@ -1,0 +1,54 @@
+@import "_normalize.scss";
+@import "_bootstrap.scss";
+@import "_fonts.scss";
+@import "_vars.scss";
+@import "_media.scss";
+@import "_mixins.scss";
+@import "_main.scss";
+
+.skew-left {
+	&:before {
+		transform: skewX(6deg);
+	}
+}
+.skew-right {
+	&:before {
+		transform: skewX(-6deg);
+	}
+}
+.btn.small-btn {
+	max-height: 40px;
+	line-height: 1.85;
+	&:before {
+		background: #FF9900;
+	}
+}
+.btn {
+	width: 258px;
+	height: 55px;
+	z-index: 0;
+	position: relative;
+	text-shadow: 0px 2px 4px #FF9900;
+	text-align: center;
+	line-height: 2.5;
+
+	&:before {
+		background: linear-gradient(99.66deg, #FFE600 -48.06%, rgba(255, 255, 255, 0) 76.25%), #FF9900;
+		box-shadow: 0px 4px 30px rgba(255, 153, 0, 0.5);
+		width: 100%;
+		top: 0;
+		left: 0;
+		border-radius: 6px;
+		z-index: -1;
+		height: 100%;
+	}
+
+	&:hover:before {
+		background: #FFB800;
+		box-shadow: 0px 3px 15px rgba(255, 153, 0, 0.3);
+	}
+
+	&:active:before {
+		background: #FF8A00;
+	}
+}
