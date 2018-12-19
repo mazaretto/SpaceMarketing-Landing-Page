@@ -23,6 +23,11 @@
 		background: #FF9900;
 	}
 }
+.btn.btn-orange {
+	&:before {
+		background: #FF9900;
+	}
+}
 .btn {
 	width: 258px;
 	height: 55px;
@@ -50,5 +55,68 @@
 
 	&:active:before {
 		background: #FF8A00;
+	}
+}
+
+.black {
+	color: $black;
+}
+.orange {
+	color: $orange;
+}
+
+.triangles_placeholder {
+	position: absolute;
+	z-index: 10;
+	width: 96px;
+	height: 90px;
+	* {
+		position: absolute;
+	}
+}
+.triangles_placeholder.right-position {
+	svg:nth-child(2) {
+		margin-left: 20px;
+		z-index: -1;	
+	}
+	svg:last-child {
+		margin-left: 40px;
+		z-index: -2;
+	}
+}
+.triangles_placeholder.top-position {
+	svg:nth-child(2) {
+		margin-top: -13px;
+		z-index: -1;
+		margin-left: 12.5px;
+		max-width: 70px;	
+	}
+	svg:last-child {
+		margin-top: -23px;
+		z-index: -2;
+		margin-left: 22.5px;
+		max-width: 50px;
+	}
+}
+
+.email, .phone {
+	position: relative;
+}
+.email {
+	&:before {
+		width: 24px;
+		height: 18px;
+		background: url('../img/icons/sprite_icons.png') no-repeat 0px -268px;
+		left: -34px;
+		top: 15%;
+	}
+}
+.phone {
+	&:before {
+		width: 13px;
+		height: 27px;
+		top: 10%;
+		left: -26px;
+		background: url('../img/icons/sprite_icons.png') no-repeat -27px -268px;
 	}
 }
