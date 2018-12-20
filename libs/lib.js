@@ -1,3 +1,3 @@
-export default function (jQuery) {
-
+export default function ($) {
+	require('slick-carousel')
 }

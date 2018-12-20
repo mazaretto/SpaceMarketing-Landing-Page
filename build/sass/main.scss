@@ -4,6 +4,7 @@
 @import "_vars.scss";
 @import "_media.scss";
 @import "_mixins.scss";
+@import "_slider.scss";
 @import "_main.scss";
 
 .skew-left {
@@ -63,6 +64,19 @@
 }
 .orange {
 	color: $orange;
+}
+.orange-text {
+	font-size: inherit;
+	font-weight: inherit;
+}
+
+.border-bottom {
+	border-bottom: 1px solid $orange;
+	padding-bottom: 0;
+}
+
+.upper {
+	text-transform: uppercase;
 }
 
 .triangles_placeholder {
