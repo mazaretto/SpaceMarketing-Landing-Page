@@ -24,7 +24,7 @@
 							<div class="flex-row-end">
 								<a href="mailto:box@web-service.ru" class="email">Box@web-service.ru</a>
 								<a href="tel:+79657852545" class="phone">+7(965) 685 25 45</a>
-								<a href="" class="btn skew-left small-btn">Отправить заявку</a>
+								<a href="" class="btn skew-left small-btn" data-modal="#consult_modal">Отправить заявку</a>
 							</div>
 						</div>
 					</div>
@@ -37,7 +37,7 @@
 				</div>
 				<h1>Поддержка и разработка сайтов</h1>
 				<p class="first_screen__descr">Профессиональная помощь по разработке<br/>и улучшению сервисов</p>
-				<a href="" class="btn skew-right">Узнать стоимость</a>
+				<a href="" class="btn skew-right" data-formname="Узнать стоимость" data-modal="#consult_modal">Узнать стоимость</a>
 			</div>
 			<div class="container first_screen-bottom">
 				<div class="section-separator">
@@ -87,7 +87,7 @@
 						</div>
 						<div class="first_screen-bottom__triangle">
 							<img src="img/triangles/tr_blue.svg" class="first_screen-bottom__triangle-image" alt="">
-							<h4>Не нашли свою задачу?<br/><a href="" class="orange">Расскажите о ней</a></h4>
+							<h4>Не нашли свою задачу?<br/><a href="" data-modal="#consult_popup" class="orange">Расскажите о ней</a></h4>
 						</div>
 					</div>
 				</div>
@@ -207,7 +207,7 @@
 				</div>
 				<div class="our_projects__slider">
 					<div class="our_projects__slider-item">
-						<div class="our_projects__slider-item__block">
+						<div class="our_projects__slider-item__block" data-modal="#consult_popup">
 							<p>Какое нибудь название проекта</p>
 						</div>
 						<div class="our_projects__slider-item__block">
@@ -311,6 +311,11 @@
 					<div class="cms_systems__slider-item">
 						<div></div>
 					</div>
+				</div>
+				<div class="row flex-row-end">
+					<p>
+						<svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.5 2.66987L9 7L1.5 11.3301L1.5 2.66987Z" stroke="#FF9900" stroke-width="3"/></svg>А также с самописными
+					</p>
 				</div>
 			</div>
 		</section>
@@ -448,12 +453,175 @@
 			</div>
 		</section>
 		<!-- SITE FOOTER -->
-		<footer class="container-fluid">
+		<footer class="container-fluid footer">
 			<div class="container">
-				
+				<div class="row">
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+						<img src="img/logo2.png" alt="" />
+						<a href="" class="policy black">Политика конфиденциальности</a>
+						<p class="black">Разработано в <a href="" class="orange inline">Leadera</a></p>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 center">
+						<a href="" class="footer__phone phone">+7(965) 685 25 45</a>
+						<a href="" class="btn small-btn skew-left">Отправить заявку</a>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+						<div class="row flex-row-end">
+							<a href="" class="footer__email email">Box@web-service.ru</a>
+						</div>
+						<div class="row flex-row-end">
+							<a href="" class="vk social_link"></a>
+							<a href="" class="fb social_link"></a>
+							<a href="" class="insta social_link"></a>
+							<a href="" class="twitter social_link"></a>
+						</div>
+					</div>
+				</div>
 			</div>
 		</footer>
 	</main>
+	
+	<!-- modals -->
+	<div class="modal_wrapper consult_popup" id="consult_popup">
+		<div class="modals">
+			<div class="close">X</div>
+			<div class="consult_popup-left">
+				<div class="container">
+					<div class="row">
+						<div class="col"><h4>Новогодник<br/>корпоративные подарки</h4></div>
+					</div>
+					<div class="row">
+						<div class="col"><p class="upper">Результат</p></div>
+					</div>
+					<div class="row">
+						<div class="col"><img src="img/podarki.png" alt=""></div>
+					</div>
+					<div class="row consult_popup-left__row">
+						<div class="col-xl-4 col-md-12 col-lg-6">
+							<p>Посетителей: <b>1348 / день</b></p>
+							<p>Конверсия: <b>9%</b></p>
+						</div>
+						<div class="col-xl-4 col-md-12 col-lg-6">
+							<p>Стоимость заявки: <b>117 руб.</b></p>
+							<p>Заявок: <b>от 112 / день</b></p>
+						</div>
+						<div class="col-xl-4 col-md-12 col-lg-12">
+							<p>Срок подготовки проекта: <b>1 мес.</b></p>
+							<p>Сайт: <a href="">DOBRIE-PODARKI.COM</a></p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col">
+							<p>Данный проект показал хорошие результаты. Реклама была запущена за 2 месяца до нового года, чтобы попасть на пик активности покупателей. Под новый год данные ниши сильно перегреты и цена за клиентов превышает ту, которую можно достигнуть за месяц-два до праздника в несколько раз. Для данного проекта был разработан сайт, подключена реклама в социальных сетях и контекстная реклама, так же были подключены дополнительные каналы информирования целевой аудитории по средством как голосовых так и текстовых рассылок.</p>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="consult_popup-right flex-center-col">
+				<div class="container">
+					<div class="col">
+						<img src="img/icons/messages.png" alt="">
+						<h5 class="black">Проконсультироваться</h5>
+						<p class="consult_text">Мы перезвоним Вам и проведёми<br/>консультацию по маркетингу</p>
+						<div class="box flex-center">
+							<div class="box__image"></div>
+							<div class="box__descr">
+								<p>Всеволод</p>
+								<p><b>Интернет-маркетолог</b></p>
+							</div>
+						</div>
+						<svg class="arrow_bottom" width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.64645 12.3536C3.84171 12.5488 4.15829 12.5488 4.35355 12.3536L7.53553 9.17157C7.7308 8.97631 7.7308 8.65973 7.53553 8.46447C7.34027 8.2692 7.02369 8.2692 6.82843 8.46447L4 11.2929L1.17157 8.46447C0.97631 8.2692 0.659728 8.2692 0.464466 8.46447C0.269204 8.65973 0.269204 8.97631 0.464466 9.17157L3.64645 12.3536ZM3.5 -2.18557e-08L3.5 12L4.5 12L4.5 2.18557e-08L3.5 -2.18557e-08Z" fill="#D2D2D2"/></svg>
+					</div>
+					<form action="" data-success="#success_modal">
+						<input type="hidden" class="form_name" value="" name="form[Форма]">
+						<div class="col">
+							<input type="text" required name="name[Имя]" placeholder="ИМЯ" />
+						</div>
+						<div class="col">
+							<input type="phone" required name="phone[Телефон]" placeholder="ТЕЛЕФОН" />
+						</div>
+						<div class="col">
+							<button type="submit" class="btn-submit">Отправить</button>
+						</div>
+						<p class="policy_text">
+							Нажимая кнопку "Отправить", я даю свое согласие на обработку моих персональных данных, в соответствии с <a href="" data-modal="#policy_modal" class="orange-text orange">«Политика конфиденциальности»</a></span>
+						</p>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal_wrapper" id="consult_modal">
+		<div class="modals">
+			<div class="container">
+				<div class="close">X</div>
+				<img src="img/icons/hands.png" alt="">
+				<h5 class="black">Отправить заявку</h5>
+				<p class="consult_text">Мы перезвоним и<br/>проконсультируем Вас</p>
+				<svg class="arrow_bottom" width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.64645 12.3536C3.84171 12.5488 4.15829 12.5488 4.35355 12.3536L7.53553 9.17157C7.7308 8.97631 7.7308 8.65973 7.53553 8.46447C7.34027 8.2692 7.02369 8.2692 6.82843 8.46447L4 11.2929L1.17157 8.46447C0.97631 8.2692 0.659728 8.2692 0.464466 8.46447C0.269204 8.65973 0.269204 8.97631 0.464466 9.17157L3.64645 12.3536ZM3.5 -2.18557e-08L3.5 12L4.5 12L4.5 2.18557e-08L3.5 -2.18557e-08Z" fill="#D2D2D2"/></svg>
+				<form action="" data-success="#success_modal">
+					<input type="hidden" class="form_name" value="" name="form[Форма]">
+					<div class="col">
+						<input type="text" required name="name[Имя]" placeholder="ИМЯ" />
+					</div>
+					<div class="col">
+						<input type="phone" required name="phone[Телефон]" placeholder="ТЕЛЕФОН" />
+					</div>
+					<div class="col">
+						<button type="submit" class="btn-submit">Отправить</button>
+					</div>
+					<p class="policy_text">
+						Нажимая кнопку "Отправить", я даю свое согласие на обработку моих персональных данных, в соответствии с <a href="" data-modal="#policy_modal" class="orange-text orange">«Политика конфиденциальности»</a></span>
+					</p>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="modal_wrapper" id="success_modal">
+		<div class="modals flex-center">
+			<span class="close">X</span>
+			<div class="container">
+				<h4>Спасибо за заявку!</h4>
+			</div>
+		</div>
+	</div>
+	<div class="modal_wrapper" id="policy_modal">
+		<div class="modals">
+			<div class="container">
+				<div class="close">X</div>
+				<h5 class="black">Политика конфиденциальности</h5>
+				<p> Владелец сайта <b>Lead-era.ru</b> (далее <b>Lead-era.ru</b> или Администрация) обязуется сохранять Вашу конфиденциальность в сети Интернет.<br/>
+					Настоящая Политика конфиденциальности, рассказывает о том, как собираются, обрабатываются и хранятся Ваши личные данные. Администрация уделяет большое внимание защите личной информации пользователей. Пользуясь сайтом Наука жизни, пользователь тем самым дает согласие на применение правил сбора и использования данных, изложенных в настоящем документе. Если Вы не согласны с условиями нашей политики конфиденциальности, не используйте сайт Наука жизни!<br/>
+
+					Собираемая информация<br/>
+
+					Администрация сайта может собирать следующую информацию о пользователях сайта:<br/>
+					- Фамилия, Имя, Отчество<br/>
+					- Адрес электронной почты<br/>
+					- Номер телефона<br/><br/>
+					Управление персональными данными пользователя<br/>
+					Личные данные пользователя могут быть удалены по его письменному запросу.<br/><br/>
+					Использование информации<br/>
+					Ниже описаны некоторые способы использования личной информации пользователя:<br/>
+					- для внутреннего отчета<br/>
+					- для предоставления информации и услуг, которые запрашивает пользователь<br/>
+					- для ответа на запросы пользователя<br/>
+					- для улучшения качества продуктов сайта<br/>
+					- для улучшения качества предоставления услуг<br/>
+					- для мониторинга работы сайта<br/>
+					- для отправки различной электронной корреспонденции<br/>
+					- для формирования статистических данных<br/><br/>
+					Раскрытие информации<br/>
+					Администрация не продает личные данные пользователя и не передает их третьим лицам без согласия на то пользователя. Далее, описаны некоторые случаи передачи личной информации пользователя:<br/>
+					- в случаях, если это требуется органам спецслужб или если это требует законодательство.<br/><br/>
+					Прочая информация<br/>
+					Дети любых возрастов могут беспрепятственно пользоваться данным сайтом.</p>
+			</div>
+		</div>
+	</div>
+
 	<!-- Bundle scripts -->
 	<script type="text/javascript" src="js/bundle.js" async></script>
 </body>

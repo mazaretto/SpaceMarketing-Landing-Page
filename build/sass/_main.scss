@@ -535,7 +535,18 @@ a {
 	}
 }
 
+
 .cms_systems {
+	p {
+		color: #17537E;
+		font-size: 14px;
+		max-width: 197px;
+		svg {
+			margin-right: 10px;
+		}
+		margin-top: 50px;
+		margin-right: 80px;
+	}
 	.container {
 		position: relative;
 	}
@@ -554,7 +565,7 @@ a {
 }
 
 .what_we {
-	height: 1276px;
+	height: 985px;
 	@include secBG('../img/space2.png');
 	&-header {
 		position: relative;
@@ -716,12 +727,37 @@ a {
 	}
 }
 
-footer {
+.footer {
 	height: 305px;
 	margin-top: -80px;
+	padding-top: 100px;
 	position: relative;
 	z-index:10;
 	@include secBG('../img/footer.png');
+
+	p, a:not(.btn) {
+		font-weight: 400;
+		font-size: 14px
+	}
+	.policy {
+		margin: 10px 0 20px 0;
+	}
+	&__phone {
+		margin-bottom: 30px;
+		margin-top: 30px;
+		max-width: 197px;
+	}
+	&__email {
+		margin: 30px 0;
+		max-width: 234px;
+		float: right;
+	}
+	&__phone, &__email {
+		font-weight: 800!important;
+		line-height: normal;
+		font-size:  20px!important;
+		color: $black;
+	}
 }
 
 // snippets
@@ -775,5 +811,210 @@ footer {
 	}
 	&__right {
 		right: 0;
+	}
+}
+
+.modal_wrapper {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,.5);
+	z-index: 9000;
+	overflow-y: auto;
+	overflow-x: hidden;
+	opacity: 0;
+	display: none;
+
+	.modals {
+		height: 660px;
+		position: relative;
+		cursor: default;
+		transform: scale(.8);
+		background: #fff;
+		.consult_text {
+			margin: 10px 0px 39px 0px;
+		}
+		.arrow_bottom {
+			display: block;
+		    margin: -20px auto 20px auto;
+		}
+		p {
+			font-size: 14px;
+			color: #424242;
+		}
+		.policy_text {
+			max-width: 284px;
+			margin: 0 auto;
+			font-size: 10px;
+			a {
+				display: inline;
+			}
+		}
+		.close {
+			position: absolute;
+			top: 12px;
+			font-size: 20px;
+			right: 16px;
+			color: $black;
+			cursor: pointer;
+			user-select: none;
+			&:hover {
+				opacity: .8;
+			}
+		}
+
+		input, button {
+			border: 0;
+			width: 100%;
+			text-align: center;
+			height: 50px;
+		}
+		button {
+			margin: 10px 0;
+			background: $orange;
+			border-radius: 5px;
+			font-size: 14px;
+			color: #fff;
+			text-transform: uppercase;
+			font-weight: 900;
+			letter-spacing: 1px;
+			cursor: pointer;
+			@extend %transition;
+			&:hover {
+				background: #FFB800;
+			}
+			&:active {
+				background: $orange;
+			}
+		}
+		input {
+			background: #EEEEEE;
+			color: $black;
+			margin-bottom: 10px;
+			&::-webkit-input-placeholder {
+				color: $black;
+			}
+		}
+		@extend %transition;
+	}
+	
+	@extend %transition;
+}
+.consult_popup {
+	.modals {
+		max-width: 1270px;
+		width: 100%;
+		height: 784px;
+		display: flex;
+		flex-wrap: wrap;
+	}
+	&-left {
+		width: 70%;
+		box-sizing: border-box;
+		overflow-x: hidden;
+		height: 100%;
+		padding: 46px 30px;
+		@include secBG('../img/icons/popup_bg.png');
+		background-size: cover;
+		img {
+			width: 100%;
+		}
+		.upper {
+			font-size: 20px!important;
+			margin: 10px 0 24px 0;
+		}
+		p {
+			color: #fff!important;
+		}
+		&__row {
+			line-height: 2;
+			margin-top: 18px;
+			margin-bottom: 18px;
+			a {
+				display: inline;
+				font-size: 16px;
+				border-bottom: 1px solid #fff;
+				line-height: 1;
+			}
+		}
+		overflow-y: auto;
+		@extend %scroll;
+	}
+	&-right {
+		width: 30%;
+		height: 100%;
+		text-align: center;
+
+		h5 {
+			margin: 30px 0 12px 0;
+		}
+		svg {
+			margin: 20px auto!important;
+		}
+		.box {
+			width: 100%;
+			height: 80px;
+			border: 2px solid rgba(0, 0, 0, 0.05);
+			box-sizing: border-box;
+			border-radius: 5px;
+			margin: 0 auto;
+			&__image {
+				width: 57px;
+				height: 57px;
+				margin-right: 15px;
+				background: #C4C4C4;
+				border-radius: 50%;
+			}
+			&__descr {
+				text-align: left;
+			}
+		}
+	}
+}
+#success_modal {
+	.modals {
+		max-width: 500px;
+		background: linear-gradient(99.66deg, #FFE600 -48.06%, rgba(255, 255, 255, 0) 76.25%), #FF9900;
+		max-height: 200px;
+		width: 100%;
+		h4 {
+			text-align: center;
+		}
+	}
+}
+#policy_modal {
+	z-index: 9999!important;
+	.modals {
+		text-align: center;
+		padding: 50px 10px;
+		max-width: 407px;
+		width: 100%;
+		h5 {
+			margin-bottom: 20px;
+		}
+		p {
+			text-align: left;
+			color: $black;
+			max-height: 500px;
+			overflow-y: auto;
+			@extend %scroll;
+		}
+	}
+}
+#consult_modal {
+	.modals {
+		text-align: center;
+		padding: 10px;
+		max-width: 407px;
+		width: 100%;
+		@extend %flex-center-in-col;
+	}
+}
+.modal_show {
+	opacity: 1;
+	.modals {
+		transform: scale(1);
 	}
 }

@@ -49,6 +49,15 @@
 	justify-content: flex-end;
 	align-items: center;
 }
+.flex-col-end {
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-end;
+	flex-direction: column;
+}
+.flex-center-col {
+	@extend %flex-center-in-col;
+}
 .flex-start {
 	display: flex;
 	justify-content: flex-start;

@@ -116,6 +116,10 @@
 .email, .phone {
 	position: relative;
 }
+.policy {
+	border-bottom: 1px solid $black;
+	display: inline-block;
+}
 .email {
 	&:before {
 		width: 24px;
@@ -133,4 +137,44 @@
 		left: -26px;
 		background: url('../img/icons/sprite_icons.png') no-repeat -27px -268px;
 	}
+}
+
+.inline {
+	display: inline!important;
+	font-size: inherit;
+	font-weight: 400;
+}
+
+.inherit {
+	font-weight: inherit!important;
+	font-size: inherit!important;
+	color: inherit!important;
+}
+
+.center {
+	> * {
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+.social_link {
+	width: 47px;
+	height: 47px;
+	margin-left: 20px;
+	background: url('../img/icons/social.png') no-repeat;
+	&:hover {
+		opacity: .5;
+		transform: scale(.9);
+	}
+}
+
+.fb {
+	background-position: -67px 0px;
+}
+.insta {
+	background-position: -134px 0px;
+}
+.twitter {
+	background-position: -202px 0px;
 }
