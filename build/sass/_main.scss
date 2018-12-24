@@ -125,6 +125,13 @@ a {
 	
 	&-top {
 		margin-bottom: 300px;
+		position: relative;
+		&__triangle {
+			position: absolute;
+			right: 0;
+			top: 50%;
+			z-index: -1;
+		}
 	}
 	&-bottom {
 		h2 {
@@ -239,7 +246,8 @@ a {
 
 .white_section:not(.cms_systems) {
 	.triangles_placeholder {
-		left: 46.2%;
+		left: 50%;
+		transform: translateX(-50%);
 		top: -25%;
 	}
 }
@@ -540,7 +548,7 @@ a {
 	p {
 		color: #17537E;
 		font-size: 14px;
-		max-width: 197px;
+		max-width: 207px;
 		svg {
 			margin-right: 10px;
 		}
@@ -664,7 +672,8 @@ a {
 	@include secBG('../img/partner_bg.png');
 
 	.triangles_placeholder {
-		left: 47.2%;
+		left: 50%;
+		transform: translateX(-50%);
 		top: 12%!important;
 	}
 	.arrows {
