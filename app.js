@@ -4,8 +4,9 @@ import LIBS from './libs/lib.js'
 (function ($) {
 	window.$ = $
 	LIBS($)
-
 	const MyModal = {
+		/* Developer: github.com/mazaretto */
+
 		// prefix data-attribute
 		prefix: 'data-modal',
 		// setting delay where set display:none on modal
