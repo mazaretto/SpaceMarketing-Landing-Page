@@ -3030,7 +3030,7 @@ html {
   .partners__slider-item img {
     margin-top: 80px; } }
 
-*:before, *:after, a, .our_projects__slider-item__block > p, .arrows > * > path, .modal_wrapper .modals button, .modal_wrapper .modals, .modal_wrapper {
+*:before, *:after, a, .our_projects__slider-item__block > p, .arrows > * > path, .modal_wrapper .modals button, .modal_wrapper .modals input, .modal_wrapper .modals, .modal_wrapper {
   -webkit-transition: .5s ease;
   transition: .5s ease; }
 
@@ -3306,9 +3306,13 @@ a {
     position: relative; }
     .first_screen-top__triangle {
       position: absolute;
-      right: 0;
-      top: 50%;
-      z-index: -1; }
+      right: -10%;
+      top: 30%;
+      opacity: .8;
+      -webkit-transform: rotateY(180deg);
+              transform: rotateY(180deg);
+      z-index: -1;
+      width: 600px; }
   .first_screen-bottom h2 {
     max-width: 560px;
     position: relative; }
@@ -3925,9 +3929,14 @@ a {
     .modal_wrapper .modals input {
       background: #EEEEEE;
       color: #272727;
+      -webkit-border-radius: 5px;
+              border-radius: 5px;
+      border: 1px solid transparent;
       margin-bottom: 10px; }
       .modal_wrapper .modals input::-webkit-input-placeholder {
         color: #272727; }
+      .modal_wrapper .modals input:focus {
+        border-color: #D1D1D1; }
 
 .consult_popup .modals {
   max-width: 1270px;
@@ -4023,6 +4032,8 @@ a {
   padding: 10px;
   max-width: 407px;
   width: 100%; }
+  #consult_modal .modals img {
+    margin-bottom: 30px; }
 
 .modal_show {
   opacity: 1; }

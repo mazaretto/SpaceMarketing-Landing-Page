@@ -128,9 +128,12 @@ a {
 		position: relative;
 		&__triangle {
 			position: absolute;
-			right: 0;
-			top: 50%;
+			right: -10%;
+			top: 30%;
+			opacity: .8;
+			transform: rotateY(180deg);
 			z-index: -1;
+			width: 600px;
 		}
 	}
 	&-bottom {
@@ -901,10 +904,16 @@ a {
 		input {
 			background: #EEEEEE;
 			color: $black;
+			border-radius: 5px;
+			border: 1px solid transparent;
 			margin-bottom: 10px;
 			&::-webkit-input-placeholder {
 				color: $black;
 			}
+			&:focus {
+				border-color: #D1D1D1;
+			}
+			@extend %transition;
 		}
 		@extend %transition;
 	}
@@ -1019,6 +1028,9 @@ a {
 		max-width: 407px;
 		width: 100%;
 		@extend %flex-center-in-col;
+		img {
+			margin-bottom: 30px;
+		}
 	}
 }
 .modal_show {
