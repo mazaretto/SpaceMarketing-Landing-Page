@@ -15,7 +15,12 @@ import LIBS from './libs/lib.js'
 		modals: [],
 		// callback methods (data-opts="callback=method_name")
 		methods: {
+			consultForm (e) {
+				console.log(e)
+			},
+			projectPopup () {
 
+			}
 		},
 		// youtube url
 		currentVideo: null,

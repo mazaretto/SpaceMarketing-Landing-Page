@@ -36,7 +36,7 @@
 	position: relative;
 	text-shadow: 0px 2px 4px #FF9900;
 	text-align: center;
-	line-height: 2.5;
+	@extend %flex-center;
 
 	&:before {
 		background: linear-gradient(99.66deg, #FFE600 -48.06%, rgba(255, 255, 255, 0) 76.25%), #FF9900;

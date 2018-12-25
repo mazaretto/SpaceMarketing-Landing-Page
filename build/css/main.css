@@ -2963,6 +2963,9 @@ html {
     max-width: 150px !important; } }
 
 @media screen and (max-width: 750px) {
+  .first_screen {
+    background: url("../img/mobile/first.png") no-repeat center 0px !important;
+    background-size: cover !important; }
   .what_we-row__item {
     max-width: 49.999% !important; }
     .what_we-row__item > div:first-child {
@@ -3022,11 +3025,15 @@ html {
 @media screen and (max-width: 600px) {
   .section-separator:after, .section-separator:before {
     display: none; }
+  .every_day {
+    background: url("../img/mobile/space.png") no-repeat 0px 0px !important;
+    background-size: cover !important; }
   .we_know {
     text-align: center;
     padding: 230px 0 130px 0 !important; }
     .we_know-rocket {
-      max-width: 100%;
+      max-width: 400px;
+      width: 100% !important;
       margin: 0 auto !important;
       height: 100px !important;
       margin-bottom: -50px !important;
@@ -3034,40 +3041,7 @@ html {
       .we_know-rocket-triangle {
         display: none; }
     .we_know a {
-      margin: 0 auto; }
-  .every_day {
-    padding-bottom: 200px !important; }
-    .every_day-cosmonaft {
-      top: 468px !important; }
-    .every_day-team {
-      margin-bottom: 450px !important; }
-      .every_day-team__item {
-        max-width: 50% !important;
-        margin: 0 !important;
-        margin-bottom: 10px !important; }
-        .every_day-team__item-descr__top:before, .every_day-team__item-descr__top:after {
-          display: none !important; }
-        .every_day-team__item-descr__bottom {
-          font-size: 12.5px; }
-    .every_day-descr, .every_day-trash {
-      margin-bottom: 20px !important;
-      text-align: center; }
-    .every_day-trash {
-      font-size: 15px !important;
-      font-weight: 400 !important; }
-      .every_day-trash-trashcan {
-        left: 50% !important;
-        top: 32% !important;
-        -webkit-transform: translateX(-50%);
-            -ms-transform: translateX(-50%);
-                transform: translateX(-50%); }
-        .every_day-trash-trashcan h4 {
-          top: 20px;
-          color: #FF9900; }
-        .every_day-trash-trashcan svg {
-          -webkit-transform: rotateX(180deg);
-                  transform: rotateX(180deg);
-          top: 50px; } }
+      margin: 0 auto; } }
 
 @media screen and (min-width: 991px) {
   .m-show {
@@ -3078,6 +3052,21 @@ html {
     display: block !important; }
     .modal_wrapper.modal_show .modals {
       margin: 0 auto !important; } }
+
+@media screen and (min-width: 601px) and (max-width: 990px) {
+  .we_know-rocket {
+    width: 503px !important;
+    height: 593px !important;
+    margin-top: -100px !important; }
+  .every_day {
+    padding-bottom: 200px !important; }
+    .every_day-trash-trashcan {
+      margin-left: 91px;
+      margin-top: -29px; }
+  .cms_systems {
+    margin-top: -54px !important; }
+  section.our_projects {
+    background-size: cover !important; } }
 
 @media screen and (max-width: 1024px) {
   .cms_systems__slider-item > div {
@@ -3198,14 +3187,44 @@ html {
       margin-bottom: 20px !important; }
     .clients_world > .container > .row > div:last-child {
       position: absolute;
-      bottom: 100px; }
+      bottom: 100px;
+      left: 0; }
   .every_day {
     margin-top: -150px !important;
-    background: url("../img/mobile/space.png") no-repeat 0px 0px !important;
-    background-size: cover !important; }
+    padding-bottom: 200px !important; }
+    .every_day-team {
+      margin-bottom: 450px !important; }
+      .every_day-team__item {
+        max-width: 50% !important;
+        margin: 0 !important;
+        margin-bottom: 10px !important; }
+        .every_day-team__item-descr__top:before, .every_day-team__item-descr__top:after {
+          display: none !important; }
+        .every_day-team__item-descr__bottom {
+          font-size: 12.5px; }
+    .every_day-descr, .every_day-trash {
+      margin-bottom: 20px !important;
+      text-align: center; }
+    .every_day-trash {
+      font-size: 15px !important;
+      font-weight: 400 !important; }
+      .every_day-trash-trashcan {
+        left: 50% !important;
+        top: 32% !important;
+        -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+                transform: translateX(-50%); }
+        .every_day-trash-trashcan h4 {
+          top: 20px;
+          color: #FF9900; }
+        .every_day-trash-trashcan svg {
+          -webkit-transform: rotateX(180deg);
+                  transform: rotateX(180deg);
+          top: 50px; }
     .every_day-cosmonaft {
       right: -220px !important;
       max-width: 507px;
+      top: 40% !important;
       -webkit-transform: rotateY(180deg);
               transform: rotateY(180deg);
       max-height: 544px; }
@@ -3224,7 +3243,6 @@ html {
     margin-bottom: 20px !important; }
   .our_projects {
     background: url("../img/mobile/earth.png") no-repeat 0px 113px !important;
-    background-size: contain !important;
     padding-bottom: 100px; }
     .our_projects-header {
       position: relative !important; }
@@ -3291,10 +3309,8 @@ html {
     .cms_systems__slider-item > div {
       margin: 0 auto !important; }
   .first_screen {
-    background: url("../img/mobile/first.png") no-repeat center 0px !important;
     -webkit-box-sizing: content-box !important;
             box-sizing: content-box !important;
-    background-size: cover !important;
     padding-bottom: 220px; }
     .first_screen-top > h1, .first_screen-top > p {
       margin-top: -20px;
@@ -3388,7 +3404,7 @@ html {
   -webkit-transition: .5s ease;
   transition: .5s ease; }
 
-.flex-center-col, #consult_modal .modals, .flex-center, .our_projects__slider-item__block {
+.flex-center-col, #consult_modal .modals, .flex-center, .our_projects__slider-item__block, .btn {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4422,8 +4438,7 @@ a {
   z-index: 0;
   position: relative;
   text-shadow: 0px 2px 4px #FF9900;
-  text-align: center;
-  line-height: 2.5; }
+  text-align: center; }
   .btn:before {
     background: linear-gradient(99.66deg, #FFE600 -48.06%, rgba(255, 255, 255, 0) 76.25%), #FF9900;
     -webkit-box-shadow: 0px 4px 30px rgba(255, 153, 0, 0.5);
