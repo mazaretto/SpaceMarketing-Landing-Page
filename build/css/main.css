@@ -2946,6 +2946,10 @@ html {
 .invisible {
   visibility: hidden !important; }
 
+@media screen and (min-width: 1400px) {
+  .clients_world-map > img {
+    margin-top: -20px; } }
+
 @media screen and (max-width: 330px) {
   .our_projects__slider-item__block {
     max-width: 132px !important;
@@ -3019,7 +3023,7 @@ html {
   #consult_modal, #policy_modal {
     height: 100% !important;
     overflow: hidden; }
-  #consult_modal.modal_show, #policy_modal.modal_show {
+  .modal_wrapper.modal_show {
     display: block !important; } }
 
 @media screen and (max-width: 600px) {
@@ -3082,6 +3086,8 @@ html {
     margin-right: 20px !important; } }
 
 @media screen and (max-width: 450px) {
+  .clients_world-map > img {
+    max-width: 16px !important; }
   header img {
     margin: 0 auto;
     display: block; }
@@ -3112,7 +3118,6 @@ html {
             box-sizing: content-box !important;
     height: 450px;
     margin-top: -80px;
-    padding-left: 0 !important;
     padding-top: 150px;
     text-align: center; }
     footer > img, footer a {
@@ -3136,6 +3141,8 @@ html {
       max-width: 160px; }
     footer .email {
       max-width: 200px; }
+    footer .policy {
+      font-size: 16px !important; }
   h1 {
     font-size: 30px !important; }
   h5 {
@@ -3167,8 +3174,6 @@ html {
   .clients_world {
     padding-top: 131px !important;
     margin-top: -170px !important;
-    background: url("../img/mobile/map.png") no-repeat center center !important;
-    background-size: cover !important;
     max-height: 600px;
     position: relative !important; }
     .clients_world p.upper, .clients_world h2 {
@@ -3400,7 +3405,7 @@ html {
   .partners__slider-item img {
     margin-top: 80px; } }
 
-*:before, *:after, a, .our_projects__slider-item__block > p, .arrows > * > path, .modal_wrapper .modals button, .modal_wrapper .modals input, .modal_wrapper .modals, .modal_wrapper {
+*:before, *:after, a, .our_projects__slider-item__block > p, .town-message, .arrows > * > path, .modal_wrapper .modals button, .modal_wrapper .modals input, .modal_wrapper .modals, .modal_wrapper {
   -webkit-transition: .5s ease;
   transition: .5s ease; }
 
@@ -3624,8 +3629,17 @@ main > section {
   background-size: cover !important;
   margin: 0 auto;
   position: relative;
-  z-index: 1;
-  overflow: hidden; }
+  z-index: 1; }
+
+footer {
+  -webkit-box-sizing: border-box !important;
+          box-sizing: border-box !important; }
+
+footer.m-show {
+  height: 600px; }
+
+section:not(.we_know) {
+  overflow: hidden !important; }
 
 header {
   padding: 20px 0;
@@ -4147,13 +4161,46 @@ a {
   height: 1226px;
   margin-top: -130px;
   z-index: 0;
-  background: url("../img/map.png") no-repeat center center; }
+  position: relative;
+  background: url("../img/map_russia.png") no-repeat center center;
+  background-size: contain !important; }
   .clients_world h2 {
     margin-top: 10px; }
   .clients_world-row {
     margin-top: 53px; }
     .clients_world-row h5 {
       margin: 0 10px; }
+  .clients_world-map {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0; }
+    .clients_world-map > img:nth-child(odd) {
+      max-width: 28px;
+      -webkit-animation: townAnimation .5s ease infinite alternate forwards;
+              animation: townAnimation .5s ease infinite alternate forwards; }
+    .clients_world-map > img:nth-child(even) {
+      -webkit-animation: townAnimation 1.5s ease infinite alternate forwards;
+              animation: townAnimation 1.5s ease infinite alternate forwards; }
+    .clients_world-map > img {
+      max-width: 35px;
+      position: absolute;
+      -webkit-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
+      top: 50%;
+      cursor: pointer;
+      -webkit-transition: .5s ease;
+      transition: .5s ease;
+      -webkit-transform: scale(1);
+          -ms-transform: scale(1);
+              transform: scale(1); }
+      .clients_world-map > img:hover {
+        -webkit-box-shadow: 0 0 20px red;
+                box-shadow: 0 0 20px red;
+        opacity: .8; }
   .clients_world-header {
     position: relative; }
     .clients_world-header > img {
@@ -4164,6 +4211,111 @@ a {
       opacity: .3;
       -webkit-transform: rotate(180deg) rotateY(180deg);
               transform: rotate(180deg) rotateY(180deg); }
+
+@-webkit-keyframes townAnimation {
+  to {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2); } }
+
+@keyframes townAnimation {
+  to {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2); } }
+
+#bazuluk {
+  left: 43.64%;
+  top: 45.1431%; }
+
+#samara {
+  left: 41.92%;
+  top: 45.2262%; }
+
+#severodvinsk {
+  left: 38.76%;
+  top: 36.8231%; }
+
+#moscow {
+  left: 38.16%;
+  top: 41.5462%; }
+
+#n-novgorod {
+  left: 39.48%;
+  top: 42.3431%; }
+
+#n-chelni {
+  left: 41.68%;
+  top: 43.2262%; }
+
+#ekatirenburg {
+  left: 44.44%;
+  top: 40.6631%; }
+
+#astrahan {
+  left: 41.52%;
+  top: 48.0262%; }
+
+#almati {
+  left: 49.8%;
+  top: 49.3031%; }
+
+#vladivostok {
+  left: 68.8%;
+  top: 49.5462%; }
+
+#kaliningrad {
+  left: 33.32%;
+  top: 41.2231%; }
+
+#surgut {
+  left: 51.04%;
+  top: 39.1462%; }
+
+#saransk {
+  left: 42.44%;
+  top: 42.3431%; }
+
+#piter {
+  left: 35.76%;
+  top: 40.1062%; }
+
+#ulan-ude {
+  left: 60.84%;
+  top: 44.2631%; }
+
+#ufa {
+  left: 44.08%;
+  top: 42.7462%; }
+
+#tumen {
+  left: 45.72%;
+  top: 41.5431%; }
+
+#voronej {
+  left: 38.96%;
+  top: 45.0662%; }
+
+#youjnouralsk {
+  left: 45.48%;
+  top: 44.1831%; }
+
+#chelyabinsk {
+  left: 47.04%;
+  top: 43.6262%; }
+
+.town-message {
+  color: #fafafa;
+  position: absolute;
+  z-index: 1000;
+  background: #010d2d;
+  padding: 15px 20px;
+  -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5); }
+  .town-message b {
+    color: #FF9900; }
+
+.town-message-hidden {
+  opacity: 0;
+  z-index: -1000 !important; }
 
 .footer {
   height: 305px;
@@ -4267,9 +4419,9 @@ a {
     .modal_wrapper .modals .close {
       position: absolute;
       top: 12px;
-      font-size: 20px;
+      font-size: 30px;
       right: 16px;
-      color: #272727;
+      color: #c2c2c2;
       cursor: pointer;
       -webkit-user-select: none;
          -moz-user-select: none;

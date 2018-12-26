@@ -1,3 +1,13 @@
+
+@media screen and (min-width: 1400px) {
+	.clients_world {
+		&-map {
+			> img {
+				margin-top: -20px;
+			}
+		}
+	}
+}
 @media screen and (max-width: 330px) {
 	.our_projects {
 		&__slider {
@@ -119,7 +129,7 @@
 		height: 100%!important;
 		overflow: hidden;
 	}
-	#consult_modal.modal_show, #policy_modal.modal_show {
+	.modal_wrapper.modal_show {
 		display: block!important;
 	}
 }
@@ -212,6 +222,13 @@
 	}
 }
 @media screen and (max-width: 450px) {
+	.clients_world {
+		&-map {
+			> img {
+				max-width: 16px!important;
+			}
+		}
+	}
 	header {
 		img {
 			margin: 0 auto;
@@ -247,7 +264,6 @@
 		box-sizing: content-box!important;
 		height: 450px;
 		margin-top: -80px;
-		padding-left: 0!important;
 		padding-top: 150px;
 		text-align: center;
 		> img, a {
@@ -275,6 +291,9 @@
 		}
 		.email {
 			max-width: 200px;
+		}
+		.policy {
+			font-size: 16px!important;
 		}
 	}
 	h1 {
@@ -313,8 +332,6 @@
 	.clients_world {
 		padding-top: 131px!important;
 		margin-top: -170px!important;
-		background: url('../img/mobile/map.png') no-repeat center center!important;
-		background-size: cover!important;
 		max-height: 600px;
 		position: relative!important;
 		p.upper, h2 {
