@@ -1,13 +1,3 @@
-
-@media screen and (min-width: 1400px) {
-	.clients_world {
-		&-map {
-			> img {
-				margin-top: -20px;
-			}
-		}
-	}
-}
 @media screen and (max-width: 330px) {
 	.our_projects {
 		&__slider {
@@ -249,6 +239,13 @@
 			}
 		}
 	}
+	.clients_world-map {
+		margin-top: 210px;
+		max-height: 400px;
+	}
+	.clients_world > div.container {
+		margin-top: 0px;
+	}
 }
 // mobile
 @media screen and (max-width: 991px) {
@@ -332,7 +329,7 @@
 	.clients_world {
 		padding-top: 131px!important;
 		margin-top: -170px!important;
-		max-height: 600px;
+		max-height: 820px;
 		position: relative!important;
 		p.upper, h2 {
 			font-size: 25px!important;

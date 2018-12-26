@@ -2946,10 +2946,6 @@ html {
 .invisible {
   visibility: hidden !important; }
 
-@media screen and (min-width: 1400px) {
-  .clients_world-map > img {
-    margin-top: -20px; } }
-
 @media screen and (max-width: 330px) {
   .our_projects__slider-item__block {
     max-width: 132px !important;
@@ -3104,7 +3100,12 @@ html {
     header .flex-row-end a {
       margin: 10px auto !important; }
   .first_screen-top__triangle {
-    top: 40% !important; } }
+    top: 40% !important; }
+  .clients_world-map {
+    margin-top: 210px;
+    max-height: 400px; }
+  .clients_world > div.container {
+    margin-top: 0px; } }
 
 @media screen and (max-width: 991px) {
   .triangles_placeholder {
@@ -3174,7 +3175,7 @@ html {
   .clients_world {
     padding-top: 131px !important;
     margin-top: -170px !important;
-    max-height: 600px;
+    max-height: 820px;
     position: relative !important; }
     .clients_world p.upper, .clients_world h2 {
       font-size: 25px !important;
@@ -3961,9 +3962,10 @@ a {
         left: 65%; }
 
 .our_projects {
-  height: 1041px;
+  height: auto;
   background: url("../img/earth.png") no-repeat center center;
-  padding-top: 180px; }
+  padding-top: 180px;
+  padding-bottom: 100px; }
   .our_projects .container {
     position: relative; }
   .our_projects__slider-item {
@@ -4157,12 +4159,16 @@ a {
         margin: 30px 0;
         max-width: 450px; }
 
+section.clients_world {
+  overflow: visible !important; }
+
 .clients_world {
   height: 1226px;
   margin-top: -130px;
   z-index: 0;
+  max-width: 1331px !important;
   position: relative;
-  background: url("../img/map_russia.png") no-repeat center center;
+  background: url("../img/map_rus.png") no-repeat center center;
   background-size: contain !important; }
   .clients_world h2 {
     margin-top: 10px; }
@@ -4198,8 +4204,6 @@ a {
           -ms-transform: scale(1);
               transform: scale(1); }
       .clients_world-map > img:hover {
-        -webkit-box-shadow: 0 0 20px red;
-                box-shadow: 0 0 20px red;
         opacity: .8; }
   .clients_world-header {
     position: relative; }
@@ -4211,6 +4215,8 @@ a {
       opacity: .3;
       -webkit-transform: rotate(180deg) rotateY(180deg);
               transform: rotate(180deg) rotateY(180deg); }
+  .clients_world > .container {
+    margin-top: -87px; }
 
 @-webkit-keyframes townAnimation {
   to {
@@ -4223,84 +4229,84 @@ a {
             transform: scale(1.2); } }
 
 #bazuluk {
-  left: 43.64%;
-  top: 45.1431%; }
+  left: 34.16%;
+  top: 37.9462%; }
 
 #samara {
-  left: 41.92%;
-  top: 45.2262%; }
+  left: 31.8%;
+  top: 38.6631%; }
 
 #severodvinsk {
-  left: 38.76%;
-  top: 36.8231%; }
+  left: 27.2%;
+  top: 28.5062%; }
 
 #moscow {
-  left: 38.16%;
-  top: 41.5462%; }
+  left: 25.8%;
+  top: 36.4231%; }
 
 #n-novgorod {
-  left: 39.48%;
-  top: 42.3431%; }
+  left: 30.4%;
+  top: 36.1862%; }
 
 #n-chelni {
-  left: 41.68%;
-  top: 43.2262%; }
+  left: 32.2%;
+  top: 35.6231%; }
 
 #ekatirenburg {
-  left: 44.44%;
-  top: 40.6631%; }
+  left: 36.48%;
+  top: 36.2662%; }
 
 #astrahan {
-  left: 41.52%;
-  top: 48.0262%; }
+  left: 30.36%;
+  top: 43.6231%; }
 
 #almati {
-  left: 49.8%;
-  top: 49.3031%; }
+  left: 44.56%;
+  top: 45.7062%; }
 
 #vladivostok {
-  left: 68.8%;
-  top: 49.5462%; }
+  left: 71.8%;
+  top: 45.8631%; }
 
 #kaliningrad {
-  left: 33.32%;
-  top: 41.2231%; }
+  left: 17.28%;
+  top: 36.9062%; }
 
 #surgut {
-  left: 51.04%;
-  top: 39.1462%; }
+  left: 45%;
+  top: 31.7031%; }
 
 #saransk {
-  left: 42.44%;
-  top: 42.3431%; }
+  left: 29.2%;
+  top: 38.5062%; }
 
 #piter {
-  left: 35.76%;
-  top: 40.1062%; }
+  left: 21.32%;
+  top: 33.0631%; }
 
 #ulan-ude {
-  left: 60.84%;
-  top: 44.2631%; }
+  left: 59.92%;
+  top: 39.2262%; }
 
 #ufa {
-  left: 44.08%;
-  top: 42.7462%; }
+  left: 34.76%;
+  top: 34.5831%; }
 
 #tumen {
-  left: 45.72%;
-  top: 41.5431%; }
+  left: 40.48%;
+  top: 34.1862%; }
 
 #voronej {
-  left: 38.96%;
-  top: 45.0662%; }
+  left: 26.68%;
+  top: 39.9431%; }
 
 #youjnouralsk {
-  left: 45.48%;
-  top: 44.1831%; }
+  left: 37.6%;
+  top: 37.9462%; }
 
 #chelyabinsk {
-  left: 47.04%;
-  top: 43.6262%; }
+  left: 38.44%;
+  top: 36.9031%; }
 
 .town-message {
   color: #fafafa;

@@ -117,10 +117,16 @@ import MyModal from './libs/MyModal.js'
 			townMessage.find('b').html(html)
 
 			let { pageX, pageY } = position
+
+			pageX = pageX - townMessage.width()
+			pageX = (pageX <= 0) ? 0 : pageX
+
 			townMessage.css({
-				'left':`${pageX - townMessage.width()}px`,
+				'left':`${pageX}px`,
 				'top':`${pageY + townMessage.height() + 20}px`
 			})
+			
+
 		}
 
 		function hideTownMessage () {
@@ -134,7 +140,6 @@ import MyModal from './libs/MyModal.js'
 			} 
 		})
 	}
-
 	townDrag()
 	MyModal.init();
 })(jQuery)

@@ -487,9 +487,10 @@ a {
 }
 
 .our_projects {
-	height: 1041px;
+	height: auto;
 	@include secBG('../img/earth.png');
 	padding-top: 180px;
+	padding-bottom: 100px;
 	.container {
 		position: relative;
 	}
@@ -725,13 +726,18 @@ a {
 	}
 }
 
+section.clients_world {
+	overflow: visible!important;
+}
 .clients_world {
 	height: 1226px;
 	margin-top: -130px;
 	z-index: 0;
+	max-width: 1331px!important;
 	position: relative;
-	@include secBG('../img/map_russia.png');
+	@include secBG('../img/map_rus.png');
 	background-size: contain!important;
+
 	h2 {
 		margin-top: 10px;
 	}
@@ -763,8 +769,7 @@ a {
 			transition: .5s ease;
 			transform: scale(1);
 			&:hover {
-				box-shadow:  0 0 20px red;
-				opacity:.8;
+			 	opacity:.8;
 			} 
 		}
 	}
@@ -779,6 +784,9 @@ a {
 			transform: rotate(180deg) rotateY(180deg);
 		}
 	}
+	> .container {
+		margin-top: -87px;
+	}
 }
 
 
@@ -788,26 +796,26 @@ a {
 	}
 }
 
-#bazuluk { left: 43.64%; top: 45.1431%; }
-#samara { left: 41.92%; top: 45.2262%; }
-#severodvinsk { left: 38.76%; top: 36.8231%; }
-#moscow { left: 38.16%; top: 41.5462%; }
-#n-novgorod { left: 39.48%; top: 42.3431%; }
-#n-chelni { left: 41.68%; top: 43.2262%; }
-#ekatirenburg { left: 44.44%; top: 40.6631%; }
-#astrahan { left: 41.52%; top: 48.0262%; }
-#almati { left: 49.8%; top: 49.3031%; }
-#vladivostok { left: 68.8%; top: 49.5462%; }
-#kaliningrad { left: 33.32%; top: 41.2231%; }
-#surgut { left: 51.04%; top: 39.1462%; }
-#saransk { left: 42.44%; top: 42.3431%; }
-#piter { left: 35.76%; top: 40.1062%; }
-#ulan-ude { left: 60.84%; top: 44.2631%; }
-#ufa { left: 44.08%; top: 42.7462%; }
-#tumen { left: 45.72%; top: 41.5431%; }
-#voronej { left: 38.96%; top: 45.0662%; }
-#youjnouralsk { left: 45.48%; top: 44.1831%; }
-#chelyabinsk { left: 47.04%; top: 43.6262%; }
+#bazuluk { left: 34.16%; top: 37.9462%; }
+#samara { left: 31.8%; top: 38.6631%; }
+#severodvinsk { left: 27.2%; top: 28.5062%; }
+#moscow { left: 25.8%; top: 36.4231%; }
+#n-novgorod { left: 30.4%; top: 36.1862%; }
+#n-chelni { left: 32.2%; top: 35.6231%; }
+#ekatirenburg { left: 36.48%; top: 36.2662%; }
+#astrahan { left: 30.36%; top: 43.6231%; }
+#almati { left: 44.56%; top: 45.7062%; }
+#vladivostok { left: 71.8%; top: 45.8631%; }
+#kaliningrad { left: 17.28%; top: 36.9062%; }
+#surgut { left: 45%; top: 31.7031%; }
+#saransk { left: 29.2%; top: 38.5062%; }
+#piter { left: 21.32%; top: 33.0631%; }
+#ulan-ude { left: 59.92%; top: 39.2262%; }
+#ufa { left: 34.76%; top: 34.5831%; }
+#tumen { left: 40.48%; top: 34.1862%; }
+#voronej { left: 26.68%; top: 39.9431%; }
+#youjnouralsk { left: 37.6%; top: 37.9462%; }
+#chelyabinsk { left: 38.44%; top: 36.9031%; }
 
 .town-message {
 	color: #fafafa;
