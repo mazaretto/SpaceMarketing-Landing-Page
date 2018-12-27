@@ -32,6 +32,7 @@ import MyModal from './libs/MyModal.js'
 
 	$('.modal_wrapper form').submit(function (e) {
 		e.preventDefault();
+		const success = $(this).attr('data-success')
 		$.ajax({
 			url: 'sendler.php',
 			method:'POST',
@@ -39,8 +40,6 @@ import MyModal from './libs/MyModal.js'
 		}).done(function(data) {
 			if(data) {
 				MyModal.allClose();
-
-				const success = $(this).attr('data-success')
 				MyModal.modalOpen($(success))
 			}
 		})
