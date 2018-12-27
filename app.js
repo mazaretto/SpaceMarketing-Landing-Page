@@ -32,10 +32,18 @@ import MyModal from './libs/MyModal.js'
 
 	$('.modal_wrapper form').submit(function (e) {
 		e.preventDefault();
-		MyModal.allClose();
+		$.ajax({
+			url: 'sendler.php',
+			method:'POST',
+			data: $(this).serialize()
+		}).done(function(data) {
+			if(data) {
+				MyModal.allClose();
 
-		const success = $(this).attr('data-success')
-		MyModal.modalOpen($(success))
+				const success = $(this).attr('data-success')
+				MyModal.modalOpen($(success))
+			}
+		})
 	})
 
 	$('.our_projects__slider,.partners__slider').slick({
