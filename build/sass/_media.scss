@@ -16,6 +16,21 @@
 		font-size: 50px!important
 	}
 }
+@media screen and (min-width: 601px) and (max-width:767px) {
+	div.we_know-rocket {
+		max-width: 382px;
+    	margin-top: -23px!important;
+	}
+	.what_we-row__item:not(.third,.first)>div:first-child>img {
+		max-width: 70px;
+	}
+	.what_we-row__item.third>div:first-child>img {
+		max-width: 130px;
+	}
+	.what_we-row__item.first>div:first-child>img {
+		max-width: 140px;
+	}
+}
 @media screen and (max-width: 370px) {
 	strong {
 		font-size: 19px!important;
@@ -70,21 +85,21 @@
 				margin-left: 5px;
 			}
 			&__item:nth-child(4) {
-				margin-left: 55px;
+				margin-left: 16px;
 			}
 			&__item:nth-child(5) {
-				margin-left: -5px;
+				margin-left: 70px;
 			}
 			&__item:nth-child(6) {
-				margin-left: 15px;
+    			margin-left: 48px;
 			}
 			&__item:nth-child(7) {
-				margin-top: 50px;
-				margin-left: -20px;
+				margin-top: 32px;
+				margin-left: 1px;
 			}
 			&__item:nth-child(8) {
-				margin-top: 50px;
-				margin-left:25px;
+				margin-top: 31px;
+				margin-left: -6px;
 			}
 		}
 	}
@@ -508,6 +523,15 @@
 	.first_screen {
 		box-sizing: content-box!important;
 		padding-bottom: 220px;
+		&-about {
+			margin-left: 0!important;
+			strong {
+				font-size: 16px!important;
+			}
+		}
+		&-number {
+			font-size: 40px!important;
+		}
 		&-top {
 			> h1, > p {
 				margin-top: -20px;
@@ -515,7 +539,9 @@
 			}
 			> .col {
 				position: absolute;
-    			bottom: 100px;
+			    bottom: 74px;
+			    padding-left: 0;
+			    text-align: center;
 			}
 			a.btn.skew-right {
 				margin: 140px auto!important;

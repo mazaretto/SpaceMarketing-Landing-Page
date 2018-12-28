@@ -413,12 +413,20 @@ a {
 			}
 		}
 		.five {
+			width: 255px;
 			> div:first-child {
 				background-position: -153px -139px;
 			    height: 63px;
 			    width: 67px;
 			    margin-top: 10px;
 			    &:before{display:none;}
+			}
+			> div:last-child {
+				p:first-child {
+					&:after {
+						left: 87%;
+					}
+				}
 			}
 		}
 	}
@@ -503,6 +511,7 @@ a {
 				width: 278px;
 				height: 242px;
 				background: url('../img/image_slider.png') no-repeat center center;
+				background-size: cover!important;
 				margin: 0px 15px 15px 0px;
 				cursor: pointer;
 				z-index: 0;

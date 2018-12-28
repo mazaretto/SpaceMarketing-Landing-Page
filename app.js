@@ -45,19 +45,17 @@ import MyModal from './libs/MyModal.js'
 		})
 	})
 
-	$('.our_projects__slider,.partners__slider').slick({
+	$('.our_projects__slider, .partners__slider').slick({
 		arrows: false,
 		dots: false,
-		loop: false,
-		infinite: false
+		infinite: true
 	})
 
 	$('.cms_systems__slider').slick({
 		arrows: false,
 		dots: false,
-		loop: false,
 		slidesToScroll: 6,
-		infinite: false,
+		infinite: true,
 		slidesToShow: 6,
 		responsive: [
 			{

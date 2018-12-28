@@ -2955,6 +2955,17 @@ html {
   h1.every_day-count {
     font-size: 50px !important; } }
 
+@media screen and (min-width: 601px) and (max-width: 767px) {
+  div.we_know-rocket {
+    max-width: 382px;
+    margin-top: -23px !important; }
+  .what_we-row__item:not(.third):not(.first) > div:first-child > img {
+    max-width: 70px; }
+  .what_we-row__item.third > div:first-child > img {
+    max-width: 130px; }
+  .what_we-row__item.first > div:first-child > img {
+    max-width: 140px; } }
+
 @media screen and (max-width: 370px) {
   strong {
     font-size: 19px !important; }
@@ -2986,17 +2997,17 @@ html {
   .first_screen-bottom__item:nth-child(3) {
     margin-left: 5px; }
   .first_screen-bottom__item:nth-child(4) {
-    margin-left: 55px; }
+    margin-left: 16px; }
   .first_screen-bottom__item:nth-child(5) {
-    margin-left: -5px; }
+    margin-left: 70px; }
   .first_screen-bottom__item:nth-child(6) {
-    margin-left: 15px; }
+    margin-left: 48px; }
   .first_screen-bottom__item:nth-child(7) {
-    margin-top: 50px;
-    margin-left: -20px; }
+    margin-top: 32px;
+    margin-left: 1px; }
   .first_screen-bottom__item:nth-child(8) {
-    margin-top: 50px;
-    margin-left: 25px; }
+    margin-top: 31px;
+    margin-left: -6px; }
   .consult_popup.modal_show {
     display: block !important; }
   h4 {
@@ -3318,12 +3329,20 @@ html {
     -webkit-box-sizing: content-box !important;
             box-sizing: content-box !important;
     padding-bottom: 220px; }
+    .first_screen-about {
+      margin-left: 0 !important; }
+      .first_screen-about strong {
+        font-size: 16px !important; }
+    .first_screen-number {
+      font-size: 40px !important; }
     .first_screen-top > h1, .first_screen-top > p {
       margin-top: -20px;
       text-align: center; }
     .first_screen-top > .col {
       position: absolute;
-      bottom: 100px; }
+      bottom: 74px;
+      padding-left: 0;
+      text-align: center; }
     .first_screen-top a.btn.skew-right {
       margin: 140px auto !important; }
     .first_screen-top__triangle {
@@ -3905,13 +3924,17 @@ a {
     .every_day-team .four .every_day-team__item-descr__top:before {
       opacity: .5;
       background: radial-gradient(#FF9900, rgba(0, 0, 0, 0.5)); }
-    .every_day-team .five > div:first-child {
-      background-position: -153px -139px;
-      height: 63px;
-      width: 67px;
-      margin-top: 10px; }
-      .every_day-team .five > div:first-child:before {
-        display: none; }
+    .every_day-team .five {
+      width: 255px; }
+      .every_day-team .five > div:first-child {
+        background-position: -153px -139px;
+        height: 63px;
+        width: 67px;
+        margin-top: 10px; }
+        .every_day-team .five > div:first-child:before {
+          display: none; }
+      .every_day-team .five > div:last-child p:first-child:after {
+        left: 87%; }
   .every_day-cosmonaft {
     position: absolute;
     top: 100px;
@@ -3985,6 +4008,7 @@ a {
       width: 278px;
       height: 242px;
       background: url("../img/image_slider.png") no-repeat center center;
+      background-size: cover !important;
       margin: 0px 15px 15px 0px;
       cursor: pointer;
       z-index: 0;
