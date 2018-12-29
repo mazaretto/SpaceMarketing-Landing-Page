@@ -69,7 +69,6 @@ export default {
 		verifyOPTS (modal) {
 			const { opts } = modal
 			const { callback } = opts
-
 			if(callback) {
 				try {
 					this.methods[callback].call(this, opts, modal)
@@ -107,7 +106,7 @@ export default {
 			return 
 		},
 		// close modal (removing modal from *modals array*)
-		modalClose (last,callback) {
+		modalClose (last,callback) {1
 			if( this.currentVideo ) {
 				this.currentVideoPlay = '?autoplay=0'
 				this.stopVideo(last)
@@ -150,6 +149,7 @@ export default {
 				currentModal.opts = opts
 				currentModal.formName = formName
 				currentModal.video = e.currentTarget.getAttribute('data-video')
+				currentModal.target = e.target
 
 				if(!this.isModalOpen(currentModal)) {
 					this.modalOpen(currentModal)

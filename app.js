@@ -1,6 +1,7 @@
 import * as jQuery from 'jquery'
 import LIBS from './libs/lib.js'
 import MyModal from './libs/MyModal.js'
+import WOW from 'wow.js'
 
 (function ($) {
 	window.$ = $
@@ -8,8 +9,12 @@ import MyModal from './libs/MyModal.js'
 
 
 	MyModal.methods = {
-		consultForm() {
+		consultForm(e,modal) {
+			const MessageInput = 'Заявка на консультацию'
 
+			modal.find('input[type="hidden"]').val(MessageInput).attr('value',MessageInput)
+			modal.find('h5').html('Отправьте заявку')
+			modal.find('.consult_text').html('Мы перезвоним и<br/>проконсультируем Вас')
 		},
 		projectPopup (e) {
 			e.image = 'img/projects/' + e.image
@@ -27,7 +32,22 @@ import MyModal from './libs/MyModal.js'
 					el.innerHTML = e[i]
 				}
 			}
-		} 
+		},
+		mapCallback(opts,modal) {
+			const { target } = modal
+			const MessageInput = 'Открытие филиала в ' + target.getAttribute('data-town')
+
+			modal.find('input[type="hidden"]').val(MessageInput).attr('value',MessageInput)
+			modal.find('h5').html('Хотите открыть маркетинговое агентство в своем городе?')
+			modal.find('.consult_text').html('Получите предложение по франшизе маркетингового агентства')
+		},
+		filialModal (opts, modal) {
+			const MessageInput = 'Открытие филиала Expert Marketing'
+
+			modal.find('input[type="hidden"]').val(MessageInput).attr('value',MessageInput)
+			modal.find('h5').html('Хотите открыть маркетинговое агентство в своем городе?')
+			modal.find('.consult_text').html('Получите предложение по франшизе маркетингового агентства')
+		}
 	}
 
 	$('.modal_wrapper form').submit(function (e) {
@@ -116,6 +136,53 @@ import MyModal from './libs/MyModal.js'
 		})
 	}
 
+	function cosmonaftAnimation (el,dist) {
+		dist = dist/10
+
+		let posX = (window.innerWidth > 1200) ? -dist : dist
+
+		el.css({
+			'margin-left':`${dist}px`,
+			'margin-top':`-${dist}px`
+		})
+	}
+
+	function rocketAnimation (el,dist) {
+		dist = dist/10
+
+		el.css({
+			'margin-top':`-${dist}px`,
+			'margin-left':`-${dist}px`
+		})
+	}
+
+	function getDistance(y1,y2) {
+		return y1-y2
+	}
+
+	function scrollerChecker () {
+		let scroller = $('.scrollerChecker')
+		let rocket = $('.we_know-rocket-this')
+		let cosmonaft = $('.every_day-cosmonaft__container img').first()
+		$(window).scroll(e => {
+			let y = window.scrollY + window.innerHeight - scroller.height()
+
+			if(y > 5000) return
+
+			scroller.css({ 'top':y+'px' })
+
+			let distRocket = getDistance(y, rocket.offset().top),
+				distCosmonaft = getDistance(y, cosmonaft.offset().top)
+			if(distRocket > -150 && distRocket <= 1100) {
+				rocketAnimation(rocket, distRocket)
+			} 
+
+			if(distCosmonaft > -150 && distCosmonaft <= 1100) {
+				cosmonaftAnimation(cosmonaft,distCosmonaft)
+			}
+		})
+	}
+
 	function townDrag () {
 		let townMessage = $('.town-message')
 		function openTownMessage (html,position) {
@@ -130,8 +197,6 @@ import MyModal from './libs/MyModal.js'
 				'left':`${pageX}px`,
 				'top':`${pageY + townMessage.height() + 20}px`
 			})
-			
-
 		}
 
 		function hideTownMessage () {
@@ -147,4 +212,6 @@ import MyModal from './libs/MyModal.js'
 	}
 	townDrag()
 	MyModal.init();
+	new WOW().init()
+	scrollerChecker()
 })(jQuery)

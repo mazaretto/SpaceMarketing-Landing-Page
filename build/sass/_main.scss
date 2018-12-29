@@ -283,7 +283,20 @@ a {
 			z-index: 10;
 			left: 27%;
 			top: 10%;
+			height: 538px;
+			width: 432px;
 			width: 70%;
+			@extend %transition;
+			&__rocket {
+				max-width: 100%;
+				max-height: 100%;
+			}
+			&__fire {
+				position: absolute;
+				bottom: -9%;
+    			left: 53%;
+				animation: fireAnimation 1s ease infinite forwards alternate;
+			}
 		}
 		&-triangle {
 			width: 100%;
@@ -413,7 +426,7 @@ a {
 			}
 		}
 		.five {
-			width: 255px;
+			width: 202px;
 			> div:first-child {
 				background-position: -153px -139px;
 			    height: 63px;
@@ -424,7 +437,7 @@ a {
 			> div:last-child {
 				p:first-child {
 					&:after {
-						left: 87%;
+						left: 98%;
 					}
 				}
 			}
@@ -435,7 +448,7 @@ a {
 		top: 100px; 
 		right: -100px;
 		width: 622px;
-		height: 672px;
+		height: 572px;
 		&__container {
 			position: relative;
 			width: 100%;
@@ -443,14 +456,21 @@ a {
 			> * {
 				position: absolute;
 			}
-			img:last-child {
+			img {
 				max-width: 100%;
 			}
 			img:first-child {
 				z-index: 10;
-				left: 29.5%;
-				top: 14.5%;
-				width: 72.5%;
+				left: 23.5%;
+				top: 18.5%;
+				width: 78.5%;
+				@extend %transition;
+			}
+			img:last-child {
+				max-width: 85%;
+			    left: 8%;
+			    z-index: 20;
+			    bottom: 5.68%;
 			}
 		}
 	}
@@ -477,18 +497,26 @@ a {
 		max-width: 400px;
 		position: relative;
 		&-trashcan {
-			top: -100px;
-			left: 95%;
+			top: -73px;
+			left: 103%;
 			position: absolute;
 			> svg {
 				position: absolute;
-				bottom: 15%;
-				left: 80%;
+				bottom: -1%;
+    			left: 100%;
 			}
 			h4 {
 				position: absolute;
-				bottom: 0;
-				left: 65%;
+				bottom: -38px;
+    			left: 74%;
+			}
+			> img {
+				@extend %transition;
+				&:hover {
+					cursor: pointer;
+					transform-origin: center center;
+					transform: rotate(15deg);
+				}
 			}
 		}
 	}
@@ -591,8 +619,14 @@ a {
 				width: 120px;
 				margin-right: 88px;
 				height: 120px;
-				background: #C7E8FF;
+				background: #fff; //#C7E8FF
+				border: 1px solid #C7E8FF;
 				border-radius: 50%;
+				overflow: hidden;
+				> img {
+					max-width: 100%;
+				}
+				@extend %flex-center;
 			}
 		}
 	}
@@ -700,7 +734,7 @@ a {
 	.triangles_placeholder {
 		left: 50%;
 		transform: translateX(-50%);
-		top: 12%!important;
+		top: 11%!important;
 	}
 	.arrows {
 		left: 50%;
@@ -753,9 +787,64 @@ section.clients_world {
 	&-row {
 		margin-top: 53px;
 		h5 {
-			margin: 0 10px;
+			margin-right: 10px;
 		}
 	}
+
+	&-form {
+		position: absolute;
+		width: 100%;
+		bottom: 23%;
+		left: 0;
+
+		h3 {
+			text-align: center;
+			margin-bottom: 50px;
+		}
+		a {
+			margin: 0 auto;
+			text-align: center;
+			max-width: 400px!important;
+			width: 90%!important;
+			font-size: 18px;
+			text-transform: uppercase;
+			border: 1px solid #015583;
+			height: 50px;
+			background: linear-gradient(#012051, #015583);
+			@extend %flex-center;
+			box-shadow: 0 5px 10px #012051;
+			position: relative;
+			&:before, &:after {
+				width: 50%;
+				height: 100%;
+				border: 1px solid transparent;
+			}
+			&:before {
+				top: 0;
+				left: 0;
+			}
+			&:after {
+				bottom: 0;
+				right: 0;
+			}
+			&:hover {
+				transform: translateY(2px);
+				&:before {
+					top: -10px;
+					left: -10px;
+					border-left-color: #015583;
+					border-top-color: #015583;
+				}
+				&:after {
+					bottom: -10px;
+					right: -10px;
+					border-bottom-color: #015583;
+					border-right-color: #015583;
+				}
+			}
+		}
+	}
+
 	&-map {
 		position: absolute;
 		width: 100%;
@@ -805,26 +894,26 @@ section.clients_world {
 	}
 }
 
-#bazuluk { left: 34.16%; top: 37.9462%; }
-#samara { left: 31.8%; top: 38.6631%; }
-#severodvinsk { left: 27.2%; top: 28.5062%; }
-#moscow { left: 25.8%; top: 36.4231%; }
-#n-novgorod { left: 30.4%; top: 36.1862%; }
-#n-chelni { left: 32.2%; top: 35.6231%; }
-#ekatirenburg { left: 36.48%; top: 36.2662%; }
-#astrahan { left: 30.36%; top: 43.6231%; }
-#almati { left: 44.56%; top: 45.7062%; }
-#vladivostok { left: 71.8%; top: 45.8631%; }
-#kaliningrad { left: 17.28%; top: 36.9062%; }
-#surgut { left: 45%; top: 31.7031%; }
-#saransk { left: 29.2%; top: 38.5062%; }
-#piter { left: 21.32%; top: 33.0631%; }
-#ulan-ude { left: 59.92%; top: 39.2262%; }
-#ufa { left: 34.76%; top: 34.5831%; }
-#tumen { left: 40.48%; top: 34.1862%; }
-#voronej { left: 26.68%; top: 39.9431%; }
-#youjnouralsk { left: 37.6%; top: 37.9462%; }
-#chelyabinsk { left: 38.44%; top: 36.9031%; }
+#bazuluk { left: 26.92%; top: 44.0231%; }
+#samara { left: 26.12%; top: 43.3031%; }
+#severodvinsk { left: 19.08%; top: 31.1431%; }
+#moscow { left: 18.6%; top: 41.0631%; }
+#n-novgorod { left: 22.68%; top: 40.9031%; }
+#n-chelni { left: 28.2%; top: 42.1031%; }
+#ekatirenburg { left: 32.04%; top: 39.9431%; }
+#astrahan { left: 24.36%; top: 50.4231%; }
+#almati { left: 40.76%; top: 52.4231%; }
+#vladivostok { left: 74.2%; top: 53.6231%; }
+#kaliningrad { left: 8%;top: 42.2231%; }
+#surgut { left: 40.68%; top: 35.9431%; }
+#saransk { left: 24.12%; top: 42.2631%; }
+#piter { left: 12.44%; top: 36.7431%; }
+#ulan-ude { left: 59.24%; top: 44.6631%; }
+#ufa { left: 29.8%; top: 43.2231%; }
+#tumen { left: 35%; top: 39.3031%; }
+#voronej { left: 19.16%; top: 45.3031%; }
+#youjnouralsk { left: 32.44%; top: 42.5831%; }
+#chelyabinsk { left: 33.24%; top: 42.1031%; }
 
 .town-message {
 	color: #fafafa;
