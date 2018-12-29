@@ -15,6 +15,8 @@ import WOW from 'wow.js'
 			modal.find('input[type="hidden"]').val(MessageInput).attr('value',MessageInput)
 			modal.find('h5').html('Отправьте заявку')
 			modal.find('.consult_text').html('Мы перезвоним и<br/>проконсультируем Вас')
+
+			modal.find('form').attr('data-metrika-target', 'CONSULT_FORM')
 		},
 		projectPopup (e) {
 			e.image = 'img/projects/' + e.image
@@ -40,6 +42,8 @@ import WOW from 'wow.js'
 			modal.find('input[type="hidden"]').val(MessageInput).attr('value',MessageInput)
 			modal.find('h5').html('Хотите открыть маркетинговое агентство в своем городе?')
 			modal.find('.consult_text').html('Получите предложение по франшизе маркетингового агентства')
+
+			modal.find('form').attr('data-metrika-target', 'OPEN_FRANSH')
 		},
 		filialModal (opts, modal) {
 			const MessageInput = 'Открытие филиала Expert Marketing'
@@ -47,30 +51,42 @@ import WOW from 'wow.js'
 			modal.find('input[type="hidden"]').val(MessageInput).attr('value',MessageInput)
 			modal.find('h5').html('Хотите открыть маркетинговое агентство в своем городе?')
 			modal.find('.consult_text').html('Получите предложение по франшизе маркетингового агентства')
+
+			modal.find('form').attr('data-metrika-target', 'OPEN_FRANSH')
 		}
 	}
 
 	$('.modal_wrapper form').submit(function (e) {
 		e.preventDefault();
-		const success = $(this).attr('data-success')
+		const $t = $(this),
+			  success = $t.attr('data-success'),
+			  MetrikaTarget = $t.attr('data-metrika-target')
 		$.ajax({
-			url: 'sendler.php',
+			/*url: 'sendler.php',
 			method:'POST',
-			data: $(this).serialize()
+			data: $(this).serialize()*/
 		}).done(function(data) {
 			if(data) {
+				// активация цели
+
+				// закрываем все модальные окна
 				MyModal.allClose();
+				// очищаем inputs у текущей модалки.
+				MyModal.clearInputs($t.parent())
+				// открываем окно СПАСИБО
 				MyModal.modalOpen($(success))
 			}
 		})
 	})
 
+	// активация слайдера ПРОЕКТОВ и Парнтенров
 	$('.our_projects__slider, .partners__slider').slick({
 		arrows: false,
 		dots: false,
 		infinite: true
 	})
 
+	// Активация слайдера НАШИ КЛИЕНТЫ
 	$('.cms_systems__slider').slick({
 		arrows: false,
 		dots: false,
@@ -96,6 +112,7 @@ import WOW from 'wow.js'
 	})
 
 
+	// Trigger методы на стрелочки.
 	$('.arrows__left').click(function () {
 		$($(this).attr('data-carousel')).slick("slickPrev");
 	})
@@ -103,6 +120,8 @@ import WOW from 'wow.js'
 		$($(this).attr('data-carousel')).slick("slickNext");
 	})
 
+
+	// Автоматическое проставление меток на карте(drag and drop)
 	function dragMap () {
 		var isDragging = false;
 		$('.clients_world-map').mouseup(function () {
@@ -136,6 +155,7 @@ import WOW from 'wow.js'
 		})
 	}
 
+	// Аниация космонафта
 	function cosmonaftAnimation (el,dist) {
 		dist = dist/10
 
@@ -147,6 +167,7 @@ import WOW from 'wow.js'
 		})
 	}
 
+	// Анимация ракеты
 	function rocketAnimation (el,dist) {
 		dist = dist/10
 
@@ -156,10 +177,12 @@ import WOW from 'wow.js'
 		})
 	}
 
+	// Получить дистанцию от y1 до y2
 	function getDistance(y1,y2) {
 		return y1-y2
 	}
 
+	// scroller, прокручивается от скролла страницы
 	function scrollerChecker () {
 		let scroller = $('.scrollerChecker')
 		let rocket = $('.we_know-rocket-this')
@@ -183,6 +206,7 @@ import WOW from 'wow.js'
 		})
 	}
 
+	// всплывающая подсказка на карте
 	function townDrag () {
 		let townMessage = $('.town-message')
 		function openTownMessage (html,position) {
@@ -210,8 +234,13 @@ import WOW from 'wow.js'
 			} 
 		})
 	}
+
+	// активация подсказки на карте
 	townDrag()
+	// активация плагина модального окна
 	MyModal.init();
+	// активация WOW>jS
 	new WOW().init()
+	// активация ScrollChecker
 	scrollerChecker()
 })(jQuery)

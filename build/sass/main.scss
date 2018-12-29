@@ -170,6 +170,19 @@
 		transform: scale(.9);
 	}
 }
+
+.viber {
+	background-position-x: -61px;
+}
+
+.whatsapp {
+	background-position-x: -127px;
+}
+
+.telegramm {
+	background-position-x: -192px;
+}
+
 .scrollerChecker {
 	width: 100%;
 	height: 1px;
@@ -177,4 +190,18 @@
 	z-index: 9999;
 	left: 0;
 	top: 0;
+}
+
+
+#arrow {
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 20px;
+	animation: arrowAnimation .5s ease infinite forwards alternate;
+}
+
+@keyframes arrowAnimation {
+	to {
+		transform: translateY(-5px);
+	}
 }
