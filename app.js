@@ -68,7 +68,7 @@ import WOW from 'wow.js'
 		}).done(function(data) {
 			if(data) {
 				// активация цели
-
+				yaCounter51758717.reachGoal(MetrikaTarget)
 				// закрываем все модальные окна
 				MyModal.allClose();
 				// очищаем inputs у текущей модалки.
