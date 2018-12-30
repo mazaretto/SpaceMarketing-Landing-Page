@@ -62,9 +62,9 @@ import WOW from 'wow.js'
 			  success = $t.attr('data-success'),
 			  MetrikaTarget = $t.attr('data-metrika-target')
 		$.ajax({
-			/*url: 'sendler.php',
+			url: 'sendler.php',
 			method:'POST',
-			data: $(this).serialize()*/
+			data: $t.serialize()
 		}).done(function(data) {
 			if(data) {
 				// активация цели

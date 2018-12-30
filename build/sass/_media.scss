@@ -15,7 +15,6 @@
 	h1.every_day-count {
 		font-size: 50px!important
 	}
-
 }
 @media screen and (min-width: 601px) and (max-width:767px) {
 	div.we_know-rocket {
@@ -54,7 +53,7 @@
 		}
 	}
 	div.icon5 {
-		width: 102px!important;
+		width: 98px!important;
 	}
 	div.icon6 {
 		width: 79px!important;
@@ -65,6 +64,12 @@
 	}
 	div.first_screen-bottom__item:nth-child(6) {
 		margin-left: 35px!important;
+	}
+}
+@media screen and (min-width: 370px) and (max-width: 400px) {
+	div.icon5 {
+		width: 81px!important;
+    	margin-left: -18px!important;
 	}
 }
 @media screen and (max-width: 750px) {
@@ -619,9 +624,6 @@
 
 			    	p,strong {
 			    		font-size: 15px!important;
-			    		br {
-			    			display: none!important;
-			    		}
 			    	}
 			    }
 			}

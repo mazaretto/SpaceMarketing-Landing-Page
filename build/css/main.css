@@ -2984,13 +2984,18 @@ html {
     font-size: 11px !important;
     max-width: 150px !important; }
   div.icon5 {
-    width: 102px !important; }
+    width: 98px !important; }
   div.icon6 {
     width: 79px !important; }
   div.first_screen-bottom__item:nth-child(5) {
     margin-left: 25px !important; }
   div.first_screen-bottom__item:nth-child(6) {
     margin-left: 35px !important; } }
+
+@media screen and (min-width: 370px) and (max-width: 400px) {
+  div.icon5 {
+    width: 81px !important;
+    margin-left: -18px !important; } }
 
 @media screen and (max-width: 750px) {
   .first_screen {
@@ -3400,8 +3405,6 @@ html {
         max-width: 90% !important; }
         .first_screen-top > .col > div.row p, .first_screen-top > .col > div.row strong {
           font-size: 15px !important; }
-          .first_screen-top > .col > div.row p br, .first_screen-top > .col > div.row strong br {
-            display: none !important; }
     .first_screen-top a.btn.skew-right {
       margin: 140px auto !important; }
     .first_screen-top__triangle {
