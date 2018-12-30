@@ -31,16 +31,6 @@
 		margin-top: 20px;
 		margin-left: 19px;
 	}
-
-	/* 	.what_we-row__item:not(.third,.first)>div:first-child>img {
-	max-width: 70px;
-		}
-		.what_we-row__item.third>div:first-child>img {
-	max-width: 130px;
-		}
-		.what_we-row__item.first>div:first-child>img {
-	max-width: 140px;
-		} */
 }
 @media screen and (max-width: 370px) {
 	strong {
@@ -52,24 +42,8 @@
 			max-width: 150px!important;
 		}
 	}
-	div.icon5 {
-		width: 98px!important;
-	}
-	div.icon6 {
-		width: 79px!important;
-	}
-
-	div.first_screen-bottom__item:nth-child(5) {
-		margin-left: 25px!important;
-	}
-	div.first_screen-bottom__item:nth-child(6) {
-		margin-left: 35px!important;
-	}
-}
-@media screen and (min-width: 370px) and (max-width: 400px) {
-	div.icon5 {
-		width: 81px!important;
-    	margin-left: -18px!important;
+	div.first_screen-bottom__item {
+		margin-left: 50px!important;
 	}
 }
 @media screen and (max-width: 750px) {
@@ -306,6 +280,20 @@
 				top: 40%!important;
 			}
 		}
+		&-bottom {
+			&__item {
+				margin: 10px auto!important;
+				min-width: 320px!important;
+				max-width: 320px!important;
+				margin-left: 55px!important;
+			}
+		}
+	}
+	div.icon4 {
+		margin-right: 14px!important;
+	}
+	div.bottom-margin {
+		margin-bottom: 10px!important;
 	}
 	.clients_world-map {
 		margin-top: 210px;
@@ -314,6 +302,8 @@
 	.clients_world > div.container {
 		margin-top: 0px;
 	}
+
+
 }
 // mobile
 @media screen and (max-width: 991px) {
@@ -506,9 +496,6 @@
 		h5, h1, h2 {
 			text-align: center;
 		}
-	}
-	.bottom-margin {
-		margin-bottom: 20px!important;
 	}
 	.our_projects {
 		background: url('../img/mobile/earth.png') no-repeat 0px 113px!important;
