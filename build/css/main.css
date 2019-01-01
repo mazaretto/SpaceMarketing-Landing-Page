@@ -6959,7 +6959,7 @@ section.clients_world {
   z-index: 0;
   max-width: 1331px !important;
   position: relative;
-  background: url("../img/map_rus.png") no-repeat center center;
+  background: url("../img/map_lay.jpg") no-repeat center center;
   background-size: contain !important; }
   .clients_world h2 {
     margin-top: 10px; }
@@ -7029,14 +7029,14 @@ section.clients_world {
     width: 100%;
     height: 100%;
     top: 0;
-    left: 0; }
-    .clients_world-map > img:nth-child(odd) {
-      max-width: 28px;
-      -webkit-animation: townAnimation .5s ease infinite alternate forwards;
-              animation: townAnimation .5s ease infinite alternate forwards; }
-    .clients_world-map > img:nth-child(even) {
-      -webkit-animation: townAnimation 1.5s ease infinite alternate forwards;
-              animation: townAnimation 1.5s ease infinite alternate forwards; }
+    left: 0;
+    /* > img:nth-child(odd) {
+			max-width: 28px;
+			animation: townAnimation .5s ease infinite alternate forwards;
+		}
+		> img:nth-child(even) {
+			animation: townAnimation 1.5s ease infinite alternate forwards;
+		} */ }
     .clients_world-map > img {
       max-width: 35px;
       position: absolute;
@@ -7046,13 +7046,11 @@ section.clients_world {
               user-select: none;
       top: 50%;
       cursor: pointer;
-      -webkit-transition: .5s ease;
-      transition: .5s ease;
-      -webkit-transform: scale(1);
-          -ms-transform: scale(1);
-              transform: scale(1); }
-      .clients_world-map > img:hover {
-        opacity: .8; }
+      /* 			transition: .5s ease;
+transform: scale(1);
+&:hover {
+ 	opacity:.8;
+}  */ }
   .clients_world-header {
     position: relative; }
     .clients_world-header > img {
@@ -7077,84 +7075,84 @@ section.clients_world {
             transform: scale(1.2); } }
 
 #bazuluk {
-  left: 26.92%;
-  top: 44.0231%; }
+  left: 30.36%;
+  top: 50.0631%; }
 
 #samara {
-  left: 26.12%;
-  top: 43.3031%; }
+  left: 29.48%;
+  top: 50.8631%; }
 
 #severodvinsk {
-  left: 19.08%;
-  top: 31.1431%; }
+  left: 22.44%;
+  top: 38.2231%; }
 
 #moscow {
-  left: 18.6%;
-  top: 41.0631%; }
+  left: 22.92%;
+  top: 48.0631%; }
 
 #n-novgorod {
-  left: 22.68%;
-  top: 40.9031%; }
+  left: 25.56%;
+  top: 48.0631%; }
 
 #n-chelni {
-  left: 28.2%;
-  top: 42.1031%; }
+  left: 31.72%;
+  top: 47.5831%; }
 
 #ekatirenburg {
-  left: 32.04%;
-  top: 39.9431%; }
+  left: 34.84%;
+  top: 45.4231%; }
 
 #astrahan {
-  left: 24.36%;
-  top: 50.4231%; }
+  left: 29.8%;
+  top: 56.3831%; }
 
 #almati {
-  left: 40.76%;
-  top: 52.4231%; }
+  left: 46.2%;
+  top: 55.9831%; }
 
 #vladivostok {
-  left: 74.2%;
-  top: 53.6231%; }
+  left: 79.56%;
+  top: 53.5831%; }
 
 #kaliningrad {
-  left: 8%;
-  top: 42.2231%; }
+  left: 14.2%;
+  top: 48.3031%; }
 
 #surgut {
-  left: 40.68%;
-  top: 35.9431%; }
+  left: 39.32%;
+  top: 39.9831%; }
 
 #saransk {
-  left: 24.12%;
-  top: 42.2631%; }
+  left: 28.04%;
+  top: 49.9831%; }
 
 #piter {
-  left: 12.44%;
-  top: 36.7431%; }
+  left: 17.56%;
+  top: 44.2231%; }
 
 #ulan-ude {
-  left: 59.24%;
-  top: 44.6631%; }
+  left: 62.12%;
+  top: 46.4631%; }
 
 #ufa {
-  left: 29.8%;
-  top: 43.2231%; }
+  left: 33.32%;
+  top: 46.7831%; }
 
 #tumen {
-  left: 35%;
-  top: 39.3031%; }
+  left: 37.64%;
+  top: 44.6231%; }
 
 #voronej {
-  left: 19.16%;
-  top: 45.3031%; }
+  left: 24.76%;
+  top: 52.1431%; }
 
 #youjnouralsk {
-  left: 32.44%;
-  top: 42.5831%; }
+  left: 36.28%;
+  top: 48.7831%; }
 
 #chelyabinsk {
-  left: 33.24%;
-  top: 42.1031%; }
+  left: 35.56%;
+  top: 47.3431%; }
 
 .town-message {
   color: #fafafa;

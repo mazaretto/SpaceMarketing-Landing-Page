@@ -243,4 +243,6 @@ import WOW from 'wow.js'
 	new WOW().init()
 	// активация ScrollChecker
 	scrollerChecker()
+
+	dragMap()
 })(jQuery)
