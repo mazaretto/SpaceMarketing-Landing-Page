@@ -3118,6 +3118,12 @@ html {
 @media screen and (max-width: 450px) {
   .clients_world-map > img {
     max-width: 20px !important; }
+  #consult_modal .modals {
+    max-height: 502px; }
+  section:not(.we_know) {
+    overflow: hidden !important; }
+  body, html {
+    max-width: 100vw; }
   header img {
     margin: 0 auto;
     display: block; }
